@@ -1,0 +1,150 @@
+{
+    "description": "This is an example configuration file with all supported devices. You can use this as a template for creating your own configuration file containing devices you actually own.",
+
+
+    "accessories": [
+        {
+            "accessory": "Insteon",
+            "name": "Kitchen Lights",
+            "host": "khooneh.me",
+            "port": "25105",
+            "username": "ramin",
+            "password": "Charand123",
+            "device_id": "13a45c",
+            "can_dim": true,
+            "deviceType": "lightBulb"
+        },
+        {
+            "accessory": "Insteon",
+            "name": "White Lamp",
+            "host": "khooneh.me",
+            "port": "25105",
+            "username": "ramin",
+            "password": "Charand123",
+            "device_id": "1135cb",
+            "can_dim": true,
+            "deviceType": "lightBulb"
+        },
+        {
+            "accessory": "Insteon",
+            "name": "Nightstand",
+            "host": "khooneh.me",
+            "port": "25105",
+            "username": "ramin",
+            "password": "Charand123",
+            "device_id": "113b18",
+            "can_dim": true,
+            "deviceType": "lightBulb"
+        },
+        {
+            "accessory": "Insteon",
+            "name": "TV backlight",
+            "host": "khooneh.me",
+            "port": "25105",
+            "username": "ramin",
+            "password": "Charand123",
+            "device_id": "21ee1e",
+            "can_dim": false,
+            "deviceType": "lightBulb"
+        },
+        {
+            "accessory": "Insteon",
+            "name": "Sphere lamp",
+            "host": "khooneh.me",
+            "port": "25105",
+            "username": "ramin",
+            "password": "Charand123",
+            "device_id": "113788",
+            "can_dim": false,
+            "deviceType": "lightBulb"
+        },
+        {
+            "accessory": "Insteon",
+            "name": "office",
+            "host": "khooneh.me",
+            "port": "25105",
+            "username": "ramin",
+            "password": "Charand123",
+            "device_id": "1b6e23",
+            "can_dim": false,
+            "deviceType": "lightBulb"
+        },
+        {
+            "accessory": "Insteon",
+            "name": "iMac Lights",
+            "host": "khooneh.me",
+            "port": "25105",
+            "username": "ramin",
+            "password": "Charand123",
+            "device_id": "213c74",
+            "can_dim": false,
+            "deviceType": "lightBulb"
+        },
+        {
+            "accessory": "Insteon",
+            "name": "Bedroom-fan",
+            "host": "khooneh.me",
+            "port": "25105",
+            "username": "ramin",
+            "password": "Charand123",
+            "device_id": "123750",
+            "can_dim": false,
+            "deviceType": "fan"            
+        },
+        {
+            "accessory": "Insteon",
+            "name": "Outside",
+            "host": "khooneh.me",
+            "port": "25105",
+            "username": "ramin",
+            "password": "Charand123",
+            "device_id": "122f7f",
+            "can_dim": true,
+            "deviceType": "lightBulb"            
+        },
+        {
+            "accessory": "Insteon",
+            "name": "garage popak",
+            "host": "khooneh.me",
+            "port": "25105",
+            "username": "ramin",
+            "password": "Charand123",
+            "device_id": "19e312",
+            "can_dim": false,
+            "deviceType": "garage"
+        },
+        {
+            "accessory": "Insteon",
+            "name": "garage ramin",
+            "host": "khooneh.me",
+            "port": "25105",
+            "username": "ramin",
+            "password": "Charand123",
+            "device_id": "19e124",
+            "can_dim": false,
+            "deviceType": "garage"
+        },
+        {
+            "accessory": "Insteon",
+            "name": "Backyard Fountain",
+            "host": "khooneh.me",
+            "port": "25105",
+            "username": "ramin",
+            "password": "Charand123",
+            "device_id": "322fcc",
+            "can_dim": false,
+            "deviceType": "lightBulb"
+        },
+        {
+            "accessory": "Insteon",
+            "name": "Livingroom-fan",
+            "host": "khooneh.me",
+            "port": "25105",
+            "username": "ramin",
+            "password": "Charand123",
+            "device_id": "112cc2",
+            "can_dim": false,
+            "deviceType": "fan"
+        }
+    ]
+}

@@ -48,9 +48,17 @@ HttpAccessory.prototype = {
   },
 
   setBrightness: function(level) {
-    var url = this.brightness_url.replace("%b", level)
+    levelInt = parseInt(level)*255/100;
+    var intvalue = Math.ceil( levelInt ); 
 
-    this.log("Setting brightness on the '"+this.name+"' to " + level);
+    hexString = intvalue.toString(16);
+
+    var hexString2 = ("0" + i.toString(16)).substr(-2); 
+
+
+    var url = this.brightness_url.replace("%b", hexString)
+
+    this.log("Setting brightness on the '"+this.name+"' to " + hexString);
 
     this.httpRequest(url, this.http_method, function(error, response, body){
       if (error) {
