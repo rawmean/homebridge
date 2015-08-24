@@ -1,9 +1,11 @@
 var types = require("HAP-NodeJS/accessories/types.js");
-var request = require("request");
+// var request = require("request");
+var request = require('sync-request');
 
 function delay(ms) {
-   // ms += new Date().getTime();
-   // while (new Date() < ms){}
+    // ms += new Date().getTime();
+    // ms *= (Math.random()+0.5);
+    // while (new Date() < ms){}
 }
 
 function Insteon(log, config) {
@@ -34,20 +36,21 @@ Insteon.prototype = {
     
     var myURL = "http://"+this.user + ":" + this.pass + "@" + this.host + ":" + this.port + "/" +"3?0262" + this.deviceID + command + onOffState+ "=I=3";
     this.log(myURL);
+    var res = request('GET', myURL);
 
     this.log("Setting power state of " + this.deviceID + " to " + powerOn);
-    delay(500);
-    request.get({
-      url: "http://"+this.user + ":" + this.pass + "@" + this.host + ":" + this.port + "/" +"3?0262" + this.deviceID + command + onOffState+ "=I=3",
-    }, function(err, response, body) {
 
-      if (!err && response.statusCode == 200) {
-        that.log("State change complete.");
-      }
-      else {
-        that.log("Error '"+err+"' setting power state: " + body);
-      }
-    });
+    // request.get({
+    //   url: "http://"+this.user + ":" + this.pass + "@" + this.host + ":" + this.port + "/" +"3?0262" + this.deviceID + command + onOffState+ "=I=3",
+    // }, function(err, response, body) {
+
+    //   if (!err && response.statusCode == 200) {
+    //     that.log("State change complete.");
+    //   }
+    //   else {
+    //     that.log("Error '"+err+"' setting power state: " + body);
+    //   }
+    // });
   },
 
   setBrightnessLevel: function(value) {
@@ -61,18 +64,19 @@ Insteon.prototype = {
    var myURL = "http://"+this.user + ":" + this.pass + "@" + this.host + ":" + this.port + "/" +"3?0262" + this.deviceID + "0F11" + hexString2+ "=I=3";
     this.log(myURL);
     this.log("Setting brightness level of " + this.deviceID + " to " + hexString2);
-    delay(500);
-    request.get({
-      url: "http://"+this.user + ":" + this.pass + "@" + this.host + ":" + this.port + "/" +"3?0262" + this.deviceID + "0F11" + hexString2+ "=I=3",
-    }, function(err, response, body) {
+    var res = request('GET', myURL);
 
-      if (!err && response.statusCode == 200) {
-        that.log("State change complete.");
-      }
-      else {
-        that.log("Error '"+err+"' setting brightness level: " + body);
-      }
-    });
+    // request.get({
+    //   url: "http://"+this.user + ":" + this.pass + "@" + this.host + ":" + this.port + "/" +"3?0262" + this.deviceID + "0F11" + hexString2+ "=I=3",
+    // }, function(err, response, body) {
+
+    //   if (!err && response.statusCode == 200) {
+    //     that.log("State change complete.");
+    //   }
+    //   else {
+    //     that.log("Error '"+err+"' setting brightness level: " + body);
+    //   }
+    // });
   },
 
   getServices: function() {
