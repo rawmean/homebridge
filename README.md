@@ -1,4 +1,8 @@
 
+# This is an older version of Homebridge that uses shims.  Since then the author has updated it to use plugins.  You should go to https://github.com/nfarina/homebridge for the latest version.
+
+This work is not mine.  I just created a shim for Insteaon.
+
 # HomeBridge
 
 HomeBridge is a lightweight NodeJS server you can run on your home network that emulates the iOS HomeKit API. It includes a set of "shims" (found in the [accessories](accessories/) and [platforms](platforms/) folders) that provide a basic bridge from HomeKit to various 3rd-party APIs provided by manufacturers of "smart home" devices.
